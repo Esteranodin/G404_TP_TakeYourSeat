@@ -1,0 +1,13 @@
+{
+"name": "tp_takeyourseat",
+"version": "1.0.0",
+"description": "Premier TP collaboratif, création d'une appli web qui place aléatoirement les élèves",
+
+"scripts": {
+  "build:css": "tailwindcss build -i ./css/style.css -o ./css/output.css --watch"
+},
+
+  "dependencies": {
+    "tailwindcss": "^3.4.15"
+  }
+}
