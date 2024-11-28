@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-     "./index.html"
+    "./index.html"
   ],
 
   theme: {
@@ -17,13 +17,16 @@ module.exports = {
           'very-dark-blue': 'hsl(211, 92, 5)',
         },
       },
-      fontFamily: {
-        body: ['Inter', 'sans-serif'],
-      },
       fontSize: {
+        title: '30px',
         paragraph: '15px',
       },
+      fontFamily: {
+        'title': ['Niramit'],
+        'body': ['Inter', 'sans-serif'],
+      },
     },
+
   },
   plugins: [],
 }
