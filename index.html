@@ -1,13 +1,195 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Take YOUR Seat</title>
-    <link rel="stylesheet" href="./css/output.css">
-</head>
-<body>
-    <h1 class="font-title">Choisissez rapidement votre plan de classe</h1>
-    <p>balabala</p>
-</body>
+    <link rel="stylesheet" href="./css/output.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body class="bg-primary-dark-blue">
+    <header>
+      <nav class="flex justify-center items-center">
+        <img src="./src/Logo_TYS.png" alt="Logo" class="w-48 mb-8 pt-3" />
+      </nav>
+      <h1
+        class="text-neutral-off-white flex justify-center items-center text-3xl mb-8"
+      >
+        Choisissez rapidement votre plan de classe en laissant place à la magie
+        du hasard
+      </h1>
+    </header>
+
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="flex justify-center mb-8 space-x-4">
+        <img src="./src/frise2.png" alt="photo frise" class="w-96" />
+        <img src="./src/Frise.webp" alt="photo frise" class="w-72" />
+      </div>
+
+      <div>
+        <h2
+          class="text-neutral-off-white flex justify-center items-center mb-5 underline"
+        >
+          Entrez les informations de l'élève
+        </h2>
+
+        <section id="formulaireEleve" class="p-2 flex justify-center gap-5">
+          <div>
+            <label for="prenom" class="sr-only">Prénom :</label>
+            <input
+              id="prenomEleve"
+              name="prenom"
+              type="text"
+              placeholder="Entrez le prénom"
+              class="border-2 border-neutral-off-white bg-neutral-off-white p-4"
+            />
+          </div>
+
+          <div class="flex justify-center mb-4">
+            <button
+              type="button"
+              id="avatarButton"
+              class="border-4 border-neutral-off-white p-4 bg-neutral-off-white"
+            >
+              Choisir un avatar
+            </button>
+
+            <div
+              id="menuDeroulant"
+              class="hidden mt-2 bg-white border shadow-lg rounded p-4 absolute flex-col gap-2 overflow-y-auto h-[350px]"
+            >
+              <div
+                id="avatar1"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Ahmed.svg"
+              >
+                <img src="src/Bitmojis/Ahmed.svg" alt="" />
+              </div>
+              <div
+                id="avatar2"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Ali.svg"
+              >
+                <img src="src/Bitmojis/Ali.svg" alt="" />
+              </div>
+              <div
+                id="avatar3"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Clément.svg"
+              >
+                <img src="src/Bitmojis/Clément.svg" alt="" />
+              </div>
+              <div
+                id="avatar4"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Elodie.svg"
+              >
+                <img src="src/Bitmojis/Elodie.svg" alt="" />
+              </div>
+              <div
+                id="avatar5"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Hamza.svg"
+              >
+                <img src="src/Bitmojis/Hamza.svg" alt="" />
+              </div>
+              <div
+                id="avatar6"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Jérémy.svg"
+              >
+                <img src="src/Bitmojis/Jérémy.svg" alt="" />
+              </div>
+              <div
+                id="avatar7"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Karl.svg"
+              >
+                <img src="src/Bitmojis/Karl.svg" alt="" />
+              </div>
+              <div
+                id="avatar8"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Marion.svg"
+              >
+                <img src="src/Bitmojis/Marion.svg" alt="Avatar Marion" />
+              </div>
+              <div
+                id="avatar9"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Mathias.svg"
+              >
+                <img src="src/Bitmojis/Mathias.svg" alt="" />
+              </div>
+              <div
+                id="avatar10"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Mohand.svg"
+              >
+                <img src="src/Bitmojis/Mohand.svg" alt="" />
+              </div>
+              <div
+                id="avatar11"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Nadir.svg"
+              >
+                <img src="src/Bitmojis/Nadir.svg" alt="" />
+              </div>
+              <div
+                id="avatar12"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Naim D.svg"
+              >
+                <img src="src/Bitmojis/Naim D.svg" alt="" />
+              </div>
+              <div
+                id="avatar13"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Naim H.svg"
+              >
+                <img src="src/Bitmojis/Naim H.svg" alt="" />
+              </div>
+              <div
+                id="avatar14"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Simon.svg"
+              >
+                <img src="src/Bitmojis/Simon.svg" alt="" />
+              </div>
+              <div
+                id="avatar15"
+                class="avatarOption w-16 cursor-pointer"
+                data-avatar="src/Bitmojis/Sirène.svg"
+              >
+                <img src="src/Bitmojis/Sirène.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <button
+            id="submitApprenantButton"
+            class="bg-blue-500 text-white p-4 rounded"
+          >
+            Soumettre
+          </button>
+        </section>
+      </div>
+
+      <div
+        id="gridsEleve"
+        class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+      <!-- Pour tester le css sur les div apprenants -->
+        <!-- <div class="apprenant">
+          <img
+            src="./src/Bitmojis/Ahmed.svg"
+            alt=""
+            class="h-[64px] w-[64px]"
+          />
+          <p>prenom</p>
+        </div> -->
+        
+      </div>
+    </div>
+  </body>
 </html>
