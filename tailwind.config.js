@@ -1,11 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./index.html"
+    "./index.html",
+    "./script.js"
   ],
 
   theme: {
     extend: {
+
+      // .handleCard {
+      //   width: 24px;
+      //   height: 24px;
+      // background-color: 1b263bff;
+      // flex
+      // };
+      
+
       colors: {
         primary: {
           'dark-blue': 'hsl(219, 37, 17)',
