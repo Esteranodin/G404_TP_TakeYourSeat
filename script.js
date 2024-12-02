@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let listeApprenant = [];
   // Je déclare un tableau vide qui me servira à stocker les informations des apprenants (le prénom de l'élève et  son avatar).
 
-  // let cardStudent ='';
+  // // let cardStudent ='';
 
   const inputPrenomApprenant = document.querySelector("#prenomEleve");
   const avatarButton = document.querySelector("#avatarButton");
@@ -79,14 +79,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Si l'utilisateur a fait les choix necessaire à la création de sa ligne apprenant
     if (avatarChoice !== "" && inputPrenomApprenant.value !== "") {
-      listeApprenant.push({
-        nomApprenant: inputPrenomApprenant.value,
-        avatarApprenant: avatarChoice,
-      });
 
-      // création d'une div virtuelle en js
-      let cardStudent = document.createElement("div");
-      cardStudent.classList.add("apprenant");
+        listeApprenant.push({
+            nomApprenant: inputPrenomApprenant.value,
+            avatarApprenant: avatarChoice
+        });
+        
+        // création d'une div virtuelle en js
+        let cardStudent = document.createElement('div');
+        cardStudent.classList.add('card');
 
       // création d'une image virtuelle en js pour l'avatar de l'apprenant
       let newImg = document.createElement("img");
@@ -129,13 +130,31 @@ document.addEventListener("DOMContentLoaded", function () {
       studentRandom[randomNumber] = temp;
     }
 
-    const virtualDivs = document.querySelectorAll(".apprenant");
+    const virtualDivs= document.querySelectorAll('.card');  
 
     virtualDivs.forEach((virtualDiv, index) => {
       gridEleve.appendChild(studentRandom[index]);
       // ajoute chaque élément de studentRandom à gridEleve dans l'ordre mélangé.
     });
+    
+  const row1 = document.querySelector('.row-1');
+  const row2 = document.querySelector('.row-2');
+  const row3 = document.querySelector('.row-3');
+
+  row1.innerHTML = '';
+  row2.innerHTML = '';
+  row3.innerHTML = '';
+
+  for (let i = 0; i < 7 ; i++) {
+    row1.appendChild(studentRandom[i]);
   }
 
-  // classroomDisplay();
+  row2.appendChild(studentRandom[7]);
+
+  for (let i = 8; i < 15 ; i++) {
+    row3.appendChild(studentRandom[i]);
+  }
+
+  };
+
 });

@@ -597,24 +597,8 @@ video {
   margin-top: 0.5rem;
 }
 
-.mt-8{
-  margin-top: 2rem;
-}
-
-.mb-12{
-  margin-bottom: 3rem;
-}
-
-.mt-16{
-  margin-top: 4rem;
-}
-
 .flex{
   display: flex;
-}
-
-.grid{
-  display: grid;
 }
 
 .hidden{
@@ -629,10 +613,6 @@ video {
   height: 64px;
 }
 
-.h-64{
-  height: 16rem;
-}
-
 .w-16{
   width: 4rem;
 }
@@ -641,8 +621,8 @@ video {
   width: 12rem;
 }
 
-.w-72{
-  width: 18rem;
+.w-80{
+  width: 20rem;
 }
 
 .w-96{
@@ -651,26 +631,6 @@ video {
 
 .w-\[64px\]{
   width: 64px;
-}
-
-.w-64{
-  width: 16rem;
-}
-
-.w-60{
-  width: 15rem;
-}
-
-.w-56{
-  width: 14rem;
-}
-
-.w-auto{
-  width: auto;
-}
-
-.w-80{
-  width: 20rem;
 }
 
 .max-w-4xl{
@@ -685,18 +645,6 @@ video {
   cursor: pointer;
 }
 
-.grid-cols-1{
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.grid-cols-7{
-  grid-template-columns: repeat(7, minmax(0, 1fr));
-}
-
-.grid-rows-3{
-  grid-template-rows: repeat(3, minmax(0, 1fr));
-}
-
 .flex-col{
   flex-direction: column;
 }
@@ -709,20 +657,12 @@ video {
   justify-content: center;
 }
 
-.gap-1{
-  gap: 0.25rem;
-}
-
 .gap-2{
   gap: 0.5rem;
 }
 
 .gap-5{
   gap: 1.25rem;
-}
-
-.gap-6{
-  gap: 1.5rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]){
@@ -798,10 +738,6 @@ video {
   padding: 1rem;
 }
 
-.p-3{
-  padding: 0.75rem;
-}
-
 .px-6{
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -824,24 +760,14 @@ video {
   text-align: center;
 }
 
-.text-3xl{
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-4xl{
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-3xl{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-neutral-off-white{
@@ -872,12 +798,6 @@ video {
   transition-duration: 150ms;
 }
 
-.transition-transform{
-  transition-property: transform;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
-
 .duration-300{
   transition-duration: 300ms;
 }
@@ -886,10 +806,50 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.apprenant{
+.card{
   display: flex;
+  gap : 20px;
   align-items: center;
-  gap: 20px;
+}
+
+.card img {
+  background-color: white;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.row-1, .row-3 {
+  justify-content: space-between;
+  /* espace les éléments sur toute la largeur */
+}
+
+.row-2 {
+  justify-content: flex-end;
+  /* l'élève de la 2ème rangée est à droite */
 }
 
 .hover\:scale-105:hover{
@@ -898,36 +858,18 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:bg-primary-dark-blue:hover{
-  --tw-bg-opacity: 1;
-  background-color: hsl(219 37 17 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-blue-600:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-primary-dark-blue:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(219 37 17 / var(--tw-bg-opacity));
 }
 
 .hover\:shadow-xl:hover{
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.active\:scale-90:active{
-  --tw-scale-x: .9;
-  --tw-scale-y: .9;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-@media (min-width: 768px){
-  .md\:grid-cols-2{
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1024px){
-  .lg\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
