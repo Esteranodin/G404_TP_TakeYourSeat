@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   let avatarChoice = "";
   let listeApprenant = [];
-  let cardStudent ='';
+  // let cardStudent ='';
 
   const inputPrenomApprenant = document.querySelector('#prenomEleve');
   const avatarButton = document.querySelector("#avatarButton");
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // création d'une div virtuelle en js
         let cardStudent = document.createElement('div');
-        cardStudent.classList.add('apprenant');
+        cardStudent.classList.add('card');
 
         // création d'une image virtuelle en js pour l'avatar de l'apprenant
         let newImg = document.createElement('img');
@@ -90,8 +90,8 @@ document.addEventListener("DOMContentLoaded", function () {
         
         students.push(cardStudent);
       }
-    }
-      
+    };
+     
   function handleStudentDisplay() { 
     
     const studentRandom = [...students]; // copie du tableau pour stocker les apprenants
@@ -103,16 +103,30 @@ document.addEventListener("DOMContentLoaded", function () {
       studentRandom[randomNumber] = temp;
     }
 
-    const virtualDivs= document.querySelectorAll('.apprenant');  
+    const virtualDivs= document.querySelectorAll('.card');  
 
     virtualDivs.forEach((virtualDiv, index) => { 
       gridEleve.appendChild(studentRandom[index]);
-      
     });
     
+  const row1 = document.querySelector('.row-1');
+  const row2 = document.querySelector('.row-2');
+  const row3 = document.querySelector('.row-3');
+
+  row1.innerHTML = '';
+  row2.innerHTML = '';
+  row3.innerHTML = '';
+
+  for (let i = 0; i < 7 ; i++) {
+    row1.appendChild(studentRandom[i]);
+  }
+
+  row2.appendChild(studentRandom[7]);
+
+  for (let i = 8; i < 15 ; i++) {
+    row3.appendChild(studentRandom[i]);
+  }
+
   };
-  
-  // classroomDisplay();
- 
-  
+
 });
