@@ -14,22 +14,19 @@
     <nav class="flex justify-center items-center">
       <img src="./src/Logo_TYS.png" alt="Logo" class="w-48 mb-8 pt-3" />
     </nav>
-    <h1 class="text-neutral-off-white flex justify-center items-center text-3xl mb-8">
+    <h1 class="text-neutral-off-white font-title flex justify-center items-center text-3xl mb-8">
       Laissez la magie du hasard choisir rapidement votre plan de classe !
     </h1>
   </header>
   <main>
-    <article id="frise" class="flex flex-col justify-center items-center mb-8 space-x-4">
+    <article id="frise" class="flex justify-center items-center mb-8 space-x-4">
       <img src="./src/frise2.png" alt="photo frise" class="w-96" />
-      <img src="./src/Frise.webp" alt="photo frise" class="w-80" />
+      <img src="./src/Frise.webp" alt="photo frise" class="h-44" />
     </article>
 
-    <div class="max-w-4xl mx-auto text-center">
+    <div id="container" class=" mx-auto max-w-4xl text-center ">
 
-      <section id="formulaireEleve" class="p-2 flex justify-center gap-5">
-        <!-- <h2 class="text-neutral-off-white flex justify-center items-center mb-5 underline">
-          Entrez les informations de l'élève
-        </h2> -->
+      <section id="formulaireEleve" class="flex justify-center gap-10 mb-10">
         <div>
           <label for="prenom" class="sr-only">Prénom :</label>
           <input id="prenomEleve" name="prenom" type="text" placeholder="Entrez le prénom"
@@ -92,7 +89,7 @@
           </div>
         </div>
 
-        <a href="#" id="submitApprenantButton" class="bg-blue-500 text-white text-2xl p-4 rounded-lg hover:bg-blue-600 hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
+        <a href="#" id="submitApprenantButton" class="bg-primary-dark-blue text-neutral-off-white text-2xl p-4 rounded-lg hover:bg-primary-grey hover:shadow-xl transition duration-300 ease-in-out transform hover:scale-105">
           Soumettre
         </a>
       </section>
@@ -116,14 +113,14 @@
     </section>
 
         <a href="#" id="randomDispach"
-          class="absolute  bg-primary-blue text-neutral-off-white py-2 px-6 rounded-lg shadow-lg hover:bg-primary-dark-blue transition ">
+          class="font-body text-4xl font-black tracking-wider bg-neutral-very-dark-blue  text-neutral-off-white py-2 px-6 rounded-lg shadow-lg hover:bg-primary-grey transition">
           GO !
         </a>
 
     </div>
   </main>
 
-  <footer class="bg-primary-dark-blue pt-5 flex justify-center">
+  <!-- <footer class="bg-primary-dark-blue justify-center  bottom-0 w-[100%]">
     <div>
       <h3 class="text-2xl text-neutral-off-white flex justify-center ">
         Nous contacter
@@ -134,7 +131,7 @@
       <p class="text-neutral-off-white flex justify-center">Garage404</p>
     </div>
  
-  </footer >
+  </footer > -->
 </body>
 
 </html>
